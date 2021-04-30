@@ -1,0 +1,19 @@
+<form>
+    <h1>Novo Filme</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Título</mat-label>
+        <input matInput [(ngModel)]="filme.titulo" type="text" name="titulo" placeholder="Título do filme.">
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Descrição</mat-label>
+        <input matInput [(ngModel)]="filme.descricao" type="text" name="descricao" placeholder="Ex. Um breve resumo do filme.">
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="create()" class="mat-button mat-elevation-z8" mat-stroked-button color="primary">Salvar</button>
+        <button class="mat-button mat-elevation-z8" mat-stroked-button color="warm">Cancelar</button>
+    </div>
+
+</form>

@@ -1,3 +1,4 @@
+import { FilmeCreateComponent } from './components/view/filme/filme-create/filme-create.component';
 import { FilmeReadComponent } from './components/view/filme/filme-read/filme-read.component';
 import { SalaReadComponent } from './components/view/sala/sala-read/sala-read.component';
 import { HomeComponent } from './components/view/home/home.component';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path:'filmes',
     component:FilmeReadComponent
+  },
+  {
+    path:'filmes/create',
+    component:FilmeCreateComponent
   }
 ];
 

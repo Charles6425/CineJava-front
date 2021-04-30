@@ -1,3 +1,4 @@
+import { Router, Routes } from '@angular/router';
 import { FilmeService } from './../filme.service';
 import { Filme } from './../filme.model';
 import { Component, OnInit } from '@angular/core';
@@ -11,7 +12,7 @@ export class FilmeReadComponent implements OnInit {
   filme: Filme[]=[]
   displayedColumns: string[] = ['id', 'titulo', 'descricao', 'duracao','imagem','acoes'];
 
-  constructor(private service:FilmeService) { }
+  constructor(private service:FilmeService, private router:Router) { }
 
   ngOnInit(): void {
     this.findAll();
@@ -21,6 +22,10 @@ export class FilmeReadComponent implements OnInit {
     this.service.findAll().subscribe(resposta =>{
       this.filme=resposta;
     })
+  }
+ 
+  navegarFilmeCreate(){
+    this.router.navigate(["filmes/create"])
   }
 
 }

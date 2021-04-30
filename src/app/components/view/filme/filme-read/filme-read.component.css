@@ -12,8 +12,8 @@
     font-size: 2rem;
     color: rgb(105, 102, 102);
 }
-.mat-button{
-    color: black;
+button{
+    color:black;
     margin-bottom: .5rem;
 }
 
