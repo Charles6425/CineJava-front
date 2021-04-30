@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +15,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { SalaReadComponent } from './components/view/sala/sala-read/sala-read.component';
 import { HomeComponent } from './components/view/home/home.component';
 import {MatCardModule} from '@angular/material/card';
-
+import {MatTableModule} from '@angular/material/table';
+import { FilmeReadComponent } from './components/view/filme/filme-read/filme-read.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import {MatCardModule} from '@angular/material/card';
     FooterComponent,
     NavComponent,
     SalaReadComponent,
-    HomeComponent
+    HomeComponent,
+    FilmeReadComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,9 @@ import {MatCardModule} from '@angular/material/card';
     MatSidenavModule,
     MatListModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
