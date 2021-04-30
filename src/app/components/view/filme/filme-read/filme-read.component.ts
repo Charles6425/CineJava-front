@@ -9,11 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilmeReadComponent implements OnInit {
   filme: Filme[]=[]
-  displayedColumns: string[] = ['id', 'titulo', 'descricao', 'duracao','imagem'];
+  displayedColumns: string[] = ['id', 'titulo', 'descricao', 'duracao','imagem','acoes'];
 
   constructor(private service:FilmeService) { }
 
   ngOnInit(): void {
+    this.findAll();
   }
 
   findAll(){

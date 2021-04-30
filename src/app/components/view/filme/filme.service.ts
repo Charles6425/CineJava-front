@@ -9,11 +9,11 @@ import { Observable } from 'rxjs';
 })
 export class FilmeService {
 
-
-  baseUrl:String = environment.baseURL
+  baseUrl: String = environment.baseURL
   constructor(private http: HttpClient) { }
-  findAll(): Observable<Filme[]>{
-    const url= `${this.baseUrl}/filme`
+
+  findAll(): Observable<Filme[]> {
+    const url = `${this.baseUrl}/filme`
     return this.http.get<Filme[]>(url)
 
   }

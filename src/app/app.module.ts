@@ -17,6 +17,7 @@ import { HomeComponent } from './components/view/home/home.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import { FilmeReadComponent } from './components/view/filme/filme-read/filme-read.component';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FilmeReadComponent } from './components/view/filme/filme-read/filme-rea
     MatCardModule,
     MatTableModule,
     HttpClientModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
