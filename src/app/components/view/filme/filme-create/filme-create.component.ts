@@ -31,4 +31,9 @@ export class FilmeCreateComponent implements OnInit {
     })
   }
 
+  cancel():void{
+    this.router.navigate(['filmes']);
+  }
+
+
 }
