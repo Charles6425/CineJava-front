@@ -20,16 +20,26 @@ export class FilmeService {
 
   }
 
+  findById(id: String): Observable<Filme> {
+    const url = `${this.baseUrl}/filme/${id}`
+    return this.http.get<Filme>(url)
+  }
+
   create(filme: Filme): Observable<Filme> {
     const url = `${this.baseUrl}/filme`
     return this.http.post<Filme>(url, filme);
   }
+  
+  delete(id: String): Observable<void> {
+    const url = `${this.baseUrl}/filme/${id}`
+    return this.http.delete<void>(url)
+  }
 
   mensagem(str: String): void {
-    this._snack.open(`${str}`, 'OK',{      
-      horizontalPosition:'end',
-      verticalPosition:'top',
-      duration:3000
+    this._snack.open(`${str}`, 'OK', {
+      horizontalPosition: 'end',
+      verticalPosition: 'top',
+      duration: 3000
     })
   }
 
