@@ -1,3 +1,4 @@
+import { FilmeUpdateComponent } from './components/view/filme/filme-update/filme-update.component';
 import { FilmeDeleteComponent } from './components/view/filme/filme-delete/filme-delete.component';
 import { FilmeCreateComponent } from './components/view/filme/filme-create/filme-create.component';
 import { FilmeReadComponent } from './components/view/filme/filme-read/filme-read.component';
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path:'filmes/delete/:id',
     component:FilmeDeleteComponent
+  },
+  {
+    path:'filmes/update/:id',
+    component:FilmeUpdateComponent
   }
 ];
 

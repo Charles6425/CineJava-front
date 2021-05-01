@@ -35,6 +35,12 @@ export class FilmeService {
     return this.http.delete<void>(url)
   }
 
+  update(filme: Filme): Observable<void>{
+    const url = `${this.baseUrl}/filme/${filme.id}`
+    return this.http.put<void>(url, filme)
+  
+  }
+
   mensagem(str: String): void {
     this._snack.open(`${str}`, 'OK', {
       horizontalPosition: 'end',

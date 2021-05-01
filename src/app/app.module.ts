@@ -24,6 +24,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { FilmeDeleteComponent } from './components/view/filme/filme-delete/filme-delete.component';
+import { FilmeUpdateComponent } from './components/view/filme/filme-update/filme-update.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { FilmeDeleteComponent } from './components/view/filme/filme-delete/filme
     FilmeReadComponent,
     FilmeCreateComponent,
     FilmeDeleteComponent,
+    FilmeUpdateComponent,
    
   ],
   imports: [
