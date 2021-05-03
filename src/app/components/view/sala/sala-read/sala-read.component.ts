@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class SalaReadComponent implements OnInit {
 salas: Sala[]=[]
 
-  displayedColumns: string[] = ['id', 'nome', 'qt_assentos'];
+  displayedColumns: string[] = ['id', 'nome', 'qt_assentos','sessoes'];
   constructor(private service: SalaService) { }
 
   ngOnInit(): void {

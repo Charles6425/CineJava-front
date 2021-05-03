@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseURL:'https://cinejava.herokuapp.com/'
+  baseURL:'http://localhost:8080/'
 };
 
 /*

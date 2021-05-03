@@ -1,3 +1,7 @@
+import { SessaoReadComponent } from './components/view/sessao/sessao-read/sessao-read.component';
+import { SessaoReadAllComponent } from './components/view/sessao/sessao-read-all/sessao-read-all.component';
+import { SessaoCreateComponent } from './components/view/sessao/sessao-create/sessao-create.component';
+
 import { FilmeUpdateComponent } from './components/view/filme/filme-update/filme-update.component';
 import { FilmeDeleteComponent } from './components/view/filme/filme-delete/filme-delete.component';
 import { FilmeCreateComponent } from './components/view/filme/filme-create/filme-create.component';
@@ -6,6 +10,7 @@ import { SalaReadComponent } from './components/view/sala/sala-read/sala-read.co
 import { HomeComponent } from './components/view/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SessaoFilmeComponent } from './components/view/sessao/sessao-filme/sessao-filme.component';
 
 const routes: Routes = [
   {
@@ -13,7 +18,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path:'salas',
+    path:'sessao/salas',
     component: SalaReadComponent
   },
   {
@@ -31,7 +36,24 @@ const routes: Routes = [
   {
     path:'filmes/update/:id',
     component:FilmeUpdateComponent
+  },
+  {
+    path:'salas/:id_sala/sessao',
+    component:SessaoReadAllComponent
+  },
+  {
+    path:'sessao',
+    component: SessaoReadComponent
+  },
+  {
+    path:'sessao/salas/:id_sala/filmes',
+    component: SessaoFilmeComponent
+  },
+  {
+    path:'sessao/salas/:id_sala/filmes/:id_filme/create',
+    component: SessaoCreateComponent
   }
+
 ];
 
 @NgModule({

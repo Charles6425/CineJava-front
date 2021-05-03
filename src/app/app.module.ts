@@ -19,13 +19,18 @@ import { MatTableModule } from '@angular/material/table';
 import { FilmeReadComponent } from './components/view/filme/filme-read/filme-read.component';
 import { MatButtonModule } from '@angular/material/button';
 import { FilmeCreateComponent } from './components/view/filme/filme-create/filme-create.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { MatInputModule } from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { FilmeDeleteComponent } from './components/view/filme/filme-delete/filme-delete.component';
 import { FilmeUpdateComponent } from './components/view/filme/filme-update/filme-update.component';
-
+import { SessaoReadAllComponent } from './components/view/sessao/sessao-read-all/sessao-read-all.component';
+import {MatSelectModule} from '@angular/material/select';
+import { SessaoCreateComponent } from './components/view/sessao/sessao-create/sessao-create.component';
+import { SessaoReadComponent } from './components/view/sessao/sessao-read/sessao-read.component';
+import { SessaoFilmeComponent } from './components/view/sessao/sessao-filme/sessao-filme.component';
+import { SessaoDeleteComponent } from './components/view/sessao/sessao-delete/sessao-delete.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +44,13 @@ import { FilmeUpdateComponent } from './components/view/filme/filme-update/filme
     FilmeCreateComponent,
     FilmeDeleteComponent,
     FilmeUpdateComponent,
+    SessaoReadAllComponent,
+    SessaoCreateComponent,
+    SessaoReadComponent,
+    SessaoFilmeComponent,
+    SessaoDeleteComponent,  
+ 
+    
    
   ],
   imports: [
@@ -57,6 +69,8 @@ import { FilmeUpdateComponent } from './components/view/filme/filme-update/filme
     MatInputModule,
     MatFormFieldModule,
     MatSnackBarModule,
+    MatSelectModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
