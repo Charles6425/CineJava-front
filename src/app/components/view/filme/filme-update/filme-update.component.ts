@@ -42,7 +42,7 @@ export class FilmeUpdateComponent implements OnInit {
       this.router.navigate(['filmes'])
       this.service.mensagem('Filme atualizado com sucesso!')
     }, err=>{
-      this.service.mensagem('validar se todos os campos estão preenchidos corretamente')
+      this.service.mensagem('Verifique se todos os campos estão preenchidos corretamente')
     })
   }
 

@@ -31,6 +31,7 @@ import { SessaoCreateComponent } from './components/view/sessao/sessao-create/se
 import { SessaoReadComponent } from './components/view/sessao/sessao-read/sessao-read.component';
 import { SessaoFilmeComponent } from './components/view/sessao/sessao-filme/sessao-filme.component';
 import { SessaoDeleteComponent } from './components/view/sessao/sessao-delete/sessao-delete.component';
+import { SessaoUpdateComponent } from './components/view/sessao/sessao-update/sessao-update.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { SessaoDeleteComponent } from './components/view/sessao/sessao-delete/se
     SessaoCreateComponent,
     SessaoReadComponent,
     SessaoFilmeComponent,
-    SessaoDeleteComponent,  
+    SessaoDeleteComponent,
+    SessaoUpdateComponent,  
  
     
    

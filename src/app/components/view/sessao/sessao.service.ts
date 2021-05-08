@@ -13,6 +13,11 @@ export class SessaoService {
   baseUrl: String = environment.baseURL;
   constructor(private http: HttpClient, private _snack: MatSnackBar) { }
 
+  findById(id: String):Observable<Sessao>{
+    const url = `${this.baseUrl}/sessao/${id}`
+    return this.http.get<Sessao>(url)
+
+  }
 
   findByAllSalas(id_sala: String): Observable<Sessao[]> {
     const url = `${this.baseUrl}/sessao?sala=${id_sala}`
@@ -38,4 +43,16 @@ export class SessaoService {
     const url = `${this.baseUrl}/sessao/all`
     return this.http.get<Sessao[]>(url)
   }
+
+  delete(id: String):Observable<void>{
+    const url = `${this.baseUrl}/sessao/${id}`
+    return this.http.delete<void>(url)
+
+  }
+
+  update(sessao: Sessao):Observable<void>{
+    const url = `${this.baseUrl}/sessao/${sessao.id}`
+    return this.http.put<void>(url, sessao)
+  }
+
 }

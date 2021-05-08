@@ -13,7 +13,7 @@ export class SessaoReadComponent implements OnInit {
 
   constructor(private router: Router, private service: SessaoService) { }
   sessao: Sessao[] = []
-  displayedColumns: string[] = ['id','data', 'hora_inicio', 'hora_fim','valor_ingresso', 'tipo_animacao','tipo_audio'];
+  displayedColumns: string[] = ['id','data', 'hora_inicio', 'hora_fim','valor_ingresso', 'tipo_animacao','tipo_audio', 'acoes'];
 
 
   ngOnInit(): void {

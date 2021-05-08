@@ -1,3 +1,5 @@
+import { SessaoUpdateComponent } from './components/view/sessao/sessao-update/sessao-update.component';
+import { SessaoDeleteComponent } from './components/view/sessao/sessao-delete/sessao-delete.component';
 import { SessaoReadComponent } from './components/view/sessao/sessao-read/sessao-read.component';
 import { SessaoReadAllComponent } from './components/view/sessao/sessao-read-all/sessao-read-all.component';
 import { SessaoCreateComponent } from './components/view/sessao/sessao-create/sessao-create.component';
@@ -52,6 +54,14 @@ const routes: Routes = [
   {
     path:'sessao/salas/:id_sala/filmes/:id_filme/create',
     component: SessaoCreateComponent
+  },
+  {
+    path: 'sessao/delete/:id',
+    component: SessaoDeleteComponent
+  },
+  {
+    path:'sessao/:id/update',
+    component: SessaoUpdateComponent
   }
 
 ];
