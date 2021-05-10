@@ -1,3 +1,4 @@
+import { httpInterceptorProviders } from './components/view/http-interceptors'
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
@@ -32,6 +33,9 @@ import { SessaoReadComponent } from './components/view/sessao/sessao-read/sessao
 import { SessaoFilmeComponent } from './components/view/sessao/sessao-filme/sessao-filme.component';
 import { SessaoDeleteComponent } from './components/view/sessao/sessao-delete/sessao-delete.component';
 import { SessaoUpdateComponent } from './components/view/sessao/sessao-update/sessao-update.component';
+import { LoginComponent } from './components/view/account/login/login.component';
+import { AuthenticationComponent } from './components/view/authentication/authentication.component';
+import { SalaSessaoComponent } from './components/view/sala/sala-sessao/sala-sessao.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +54,11 @@ import { SessaoUpdateComponent } from './components/view/sessao/sessao-update/se
     SessaoReadComponent,
     SessaoFilmeComponent,
     SessaoDeleteComponent,
-    SessaoUpdateComponent,  
+    SessaoUpdateComponent,
+    LoginComponent,
+    AuthenticationComponent,
+    SalaSessaoComponent,
+   
  
     
    
@@ -74,7 +82,7 @@ import { SessaoUpdateComponent } from './components/view/sessao/sessao-update/se
     MatSelectModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
